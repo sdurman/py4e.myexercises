@@ -1,0 +1,15 @@
+import re
+name = input("Enter file:")
+if len(name) < 1 : name = "regex_sum_1125720.txt"
+handle = open(name)
+nlst = list()
+for line in handle:
+    line = line.rstrip()
+    stuff = re.findall("[0-9]+", line)
+    nlst = nlst + stuff
+sum = 0
+for z in nlst:
+    sum = sum + int(z)
+print(sum)
+
+#CON AYUDA
